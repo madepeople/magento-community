@@ -120,7 +120,7 @@
 ## you can put here your magento root folder
 ## path relative to web root
 
-    #RewriteBase /magento/
+    RewriteBase /
 
 ############################################
 ## uncomment next line to enable light API calls processing
@@ -191,8 +191,8 @@
 ############################################
 ## By default allow all access
 
-    Order allow,deny
-    Allow from all
+    #Order allow,deny
+    #Allow from all
 
 ###########################################
 ## Deny access to release notes to prevent disclosure of the installed Magento version
