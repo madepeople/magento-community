@@ -58,7 +58,7 @@ class Mage_ConfigurableSwatches_Helper_Mediafallback extends Mage_Core_Helper_Ab
 
         $optionLabels = array();
         foreach ($configAttributes as $attribute) {
-            $optionLabels += $attribute->getOptionLabels();
+            $optionLabels[] = $attribute->getOptionLabels();
         }
 
         foreach ($parentProducts as $parentProduct) {
