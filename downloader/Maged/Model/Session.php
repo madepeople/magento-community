@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Connect
- * @copyright  Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -48,7 +48,7 @@ class Maged_Model_Session extends Maged_Model
      */
     public function start()
     {
-        if (class_exists('Mage') && Mage::isInstalled()) {
+        if ($this->controller()->isInstalled()) {
             // initialize Magento Config
             Mage::app();
             $this->_session = Mage::getSingleton('admin/session');
